@@ -72,6 +72,7 @@ h4 {
     &__card-container {
         width: 52rem;
         margin: 0 auto;
+        min-height: 60rem;
     }
     
     &__name {
@@ -87,10 +88,94 @@ h4 {
     &__type-container {
         display: flex;
         flex-direction: column;
+        width: 6rem;
     }
 
     &__type {
         color: white;
+        border-radius: 5px;
+        text-align: center;
+        margin-bottom: 0.5rem;
+        padding: 0.5rem;
+        box-shadow: 4px 4px black;
+
+        &-normal {
+            @extend .pokemon__type;
+            background-color: grey;
+        }
+        &-fire {
+            @extend .pokemon__type;
+            background-color: orange;
+        }
+        &-water {
+            @extend .pokemon__type;
+            background-color: lightblue;
+        }
+        &-grass {
+            @extend .pokemon__type;
+            background-color: green;
+        }
+        &-electric {
+            @extend .pokemon__type;
+            background-color: yellow;
+            color: darkgrey;
+        }
+        &-ice {
+            @extend .pokemon__type;
+            background-color: aliceblue;
+            color: darkgrey;
+        }
+        &-fighting {
+            @extend .pokemon__type;
+            background-color: maroon;
+        }
+        &-poison {
+            @extend .pokemon__type;
+            background-color: purple;
+        }
+        &-ground {
+            @extend .pokemon__type;
+            background-color: brown;
+        }
+        &-flying {
+            @extend .pokemon__type;
+            background-color: azure;
+            color: darkgrey;
+        }
+        &-psychic {
+            @extend .pokemon__type;
+            background-color: pink;
+        }
+        &-bug {
+            @extend .pokemon__type;
+            background-color: yellowgreen;
+        }
+        &-rock {
+            @extend .pokemon__type;
+            background-color: goldenrod;
+        }
+        &-ghost {
+            @extend .pokemon__type;
+            background-color: rgb(93, 81, 112);
+        }
+        &-dark {
+            @extend .pokemon__type;
+            background-color: black;
+        }
+        &-dragon {
+            @extend .pokemon__type;
+            background-color: rgb(90, 15, 187);
+        }
+        &-steel {
+            @extend .pokemon__type;
+            background-color: darkgrey;
+        }
+        &-fairy {
+            @extend .pokemon__type;
+            background-color: lightpink;
+        }
+
+
     }
 
     &__content {
@@ -136,7 +221,7 @@ h4 {
 
     &__decor-button3 {
         background-color: #8ac883;
-        border-radius: .25rem;
+        border-radius: 5px;
         width: 3rem;
         height: 1rem;
         position: absolute;
@@ -174,6 +259,7 @@ h4 {
         border-radius: 7px;
         padding: 0.1rem;
         font-weight: bold;
+        box-shadow: 2px 2px black;
     }
 
     &__stats-container {

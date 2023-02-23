@@ -110,6 +110,15 @@ function generatePokemon(pokemon) {
     let decorButton3 = document.createElement("div");
     decorButton3.classList.add("pokemon__decor-button3");
     pokemonContent.appendChild(decorButton3);
+    
+    // //TYPES
+    let typeDiv = document.createElement('div');
+    typeDiv.classList.add('pokemon__type-container')
+    pokemonContent.appendChild(typeDiv);
+    for (type of pokemon.types) {
+        createTextElement('p', type.type.name, `pokemon__type-${type.type.name}`, typeDiv)
+        console.log(type.type.name);
+    }
 
     // DESCRIPTION
     // Create description container
@@ -129,14 +138,6 @@ function generatePokemon(pokemon) {
     }
     pokemonContent.appendChild(pokemonDescriptionContainer);
 
-    // //TYPES
-    let typeDiv = document.createElement('div');
-    typeDiv.classList.add('pokemon__type-container')
-    pokemonContent.appendChild(typeDiv);
-    for (type of pokemon.types) {
-        createTextElement('p', type.type.name, `pokemon__type-${type.type.name}`, typeDiv)
-        console.log(type.type.name);
-    }
 
     // STATS
     // Create Stats Container
@@ -166,13 +167,13 @@ function generatePokemon(pokemon) {
     // Special Attack
     let specialAttackRow = document.createElement("div");
     specialAttackRow.classList.add("pokemon__stat-row");
-    createTextElement("p", "Special Attack:", "pokemon__stat", specialAttackRow);
+    createTextElement("p", "Sp. Attack:", "pokemon__stat", specialAttackRow);
     createTextElement("p", pokemon.stats[3].base_stat, "pokemon__stat-num", specialAttackRow); //****** */
     pokemonStatsContainer.appendChild(specialAttackRow);
     // Special Defense
     let specialDefenseRow = document.createElement("div");
     specialDefenseRow.classList.add("pokemon__stat-row");
-    createTextElement("p", "Special Defense:", "pokemon__stat", specialDefenseRow);
+    createTextElement("p", "Sp. Defense:", "pokemon__stat", specialDefenseRow);
     createTextElement("p", pokemon.stats[4].base_stat, "pokemon__stat-num", specialDefenseRow); //****** */
     pokemonStatsContainer.appendChild(specialDefenseRow);
     // Speed
@@ -185,7 +186,7 @@ function generatePokemon(pokemon) {
     // Base Stat Total
     let bstRow = document.createElement('div');
     bstRow.classList.add('pokemon__stat-row-bst');
-    createTextElement('p', 'Base Stat Total:', 'pokemon__stat', bstRow);
+    createTextElement('p', 'Total:', 'pokemon__stat', bstRow);
     createTextElement('p', pokemon.bst, 'pokemon__stat-num', bstRow);
     pokemonStatsContainer.appendChild(bstRow);
 

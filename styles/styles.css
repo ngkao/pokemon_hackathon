@@ -170,6 +170,7 @@ h4 {
 .pokemon__card-container {
   width: 52rem;
   margin: 0 auto;
+  min-height: 60rem;
 }
 .pokemon__name {
   background-color: rgb(254, 80, 80);
@@ -183,9 +184,72 @@ h4 {
 .pokemon__type-container {
   display: flex;
   flex-direction: column;
+  width: 6rem;
 }
-.pokemon__type {
+.pokemon__type, .pokemon__type-fairy, .pokemon__type-steel, .pokemon__type-dragon, .pokemon__type-dark, .pokemon__type-ghost, .pokemon__type-rock, .pokemon__type-bug, .pokemon__type-psychic, .pokemon__type-flying, .pokemon__type-ground, .pokemon__type-poison, .pokemon__type-fighting, .pokemon__type-ice, .pokemon__type-electric, .pokemon__type-grass, .pokemon__type-water, .pokemon__type-fire, .pokemon__type-normal {
   color: white;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  box-shadow: 4px 4px black;
+}
+.pokemon__type-normal {
+  background-color: grey;
+}
+.pokemon__type-fire {
+  background-color: orange;
+}
+.pokemon__type-water {
+  background-color: lightblue;
+}
+.pokemon__type-grass {
+  background-color: green;
+}
+.pokemon__type-electric {
+  background-color: yellow;
+  color: darkgrey;
+}
+.pokemon__type-ice {
+  background-color: aliceblue;
+  color: darkgrey;
+}
+.pokemon__type-fighting {
+  background-color: maroon;
+}
+.pokemon__type-poison {
+  background-color: purple;
+}
+.pokemon__type-ground {
+  background-color: brown;
+}
+.pokemon__type-flying {
+  background-color: azure;
+  color: darkgrey;
+}
+.pokemon__type-psychic {
+  background-color: pink;
+}
+.pokemon__type-bug {
+  background-color: yellowgreen;
+}
+.pokemon__type-rock {
+  background-color: goldenrod;
+}
+.pokemon__type-ghost {
+  background-color: rgb(93, 81, 112);
+}
+.pokemon__type-dark {
+  background-color: black;
+}
+.pokemon__type-dragon {
+  background-color: rgb(90, 15, 187);
+}
+.pokemon__type-steel {
+  background-color: darkgrey;
+}
+.pokemon__type-fairy {
+  background-color: lightpink;
 }
 .pokemon__content {
   background-color: rgb(254, 80, 80);
@@ -226,7 +290,7 @@ h4 {
 }
 .pokemon__decor-button3 {
   background-color: #8ac883;
-  border-radius: 0.25rem;
+  border-radius: 5px;
   width: 3rem;
   height: 1rem;
   position: absolute;
@@ -260,6 +324,7 @@ h4 {
   border-radius: 7px;
   padding: 0.1rem;
   font-weight: bold;
+  box-shadow: 2px 2px black;
 }
 .pokemon__stats-container {
   font-size: 0.75rem;
